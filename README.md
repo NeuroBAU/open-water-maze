@@ -31,15 +31,16 @@ The eye of the camera was placed at 21.5 cm from the pool floor.
 
 
 The camera acquired pictures at two different vertical angles (30° and 60°, relative to the horizon - the water surface @ 21.5 cm from the floor of the pool) to reproduce the (estimated) field of view of a rodent swimming in the water maze. A total of 16 images (separated by 22.5° interval) were acquired at each of the 45 cells (i.e. positions) covering the floor pool.
+
 ![image_from_single position](graphics/image_from_single position.png)
 
 The pool is located in an evenly illuminated and visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking and a white curtain.
 
 Each image was visually inspected to code for the presence or absence of the following visual cues: 
 
-vertical stripes, horizontal stripes, plus sign, coffee sign, rod, wall/ceiling border, curtain , and the corners of the room.
+Vertical stripes, Horizontal stripes, Plus sign, Coffee sign, Rod, Wall/ceiling border, Curtain , and the Corners of the room.
 
-Images (N=720 x 2 vertical angles) are available in two different formats [1920 × 1080; 128 x 56; 8-bit]
+Images (N=720 x 2 vertical angles) are available in two different formats (1920 × 1080; 128 x 56; 8-bit)
 
 
 
