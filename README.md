@@ -36,15 +36,25 @@ The camera acquired pictures at two different vertical angles (30° and 60°, re
 
 The pool is located in an evenly illuminated and visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking and a white curtain.
 
-Each image was visually inspected to code for the presence or absence of the following visual cues: 
 
-Vertical stripes, Horizontal stripes, Plus sign, Coffee sign, Rod, Wall/ceiling border, Curtain , and the Corners of the room.
 
 Images (N=720 x 2 vertical angles) are available in two different formats (1920 × 1080; 128 x 56; 8-bit)
 
+## Example: information content analysis
+
+The following is a simple example on how to quantify the information content of each field of view.
+
+Each image was visually inspected to code for the presence or absence of the following visual cues: 
+
+Vertical stripes, Horizontal stripes, Plus sign, Coffee sign, Rod, Box, Wall/ceiling border, Curtain , and the Corners of the room.
+
+For each image a vector coding for the presence (1) or absence (0) of the 9 salient cues was generated, resulting in a [720 x 9] matrix. For each position and for each image, the hamming distance between an image and the 2 adjacent images (i.e. representing a left or right  turn yielding a ±22.5° change of view) was computed. The resulting 2 vectors where averaged to produce the expected/potential information content of each individual point of view.
+
+![information_content](graphics/information_content.png)
 
 
-## misc.
+
+## Misc.
 
 - the set of images labeled as A are taken at standard vertical angle (30 degrees relative to the horizon).
   the set of images labeled as B are taken at a vertical angle of 60 degrees relative to the horizon.
