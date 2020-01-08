@@ -3,6 +3,8 @@
 
 ![Environment scanning using Rasperry PI + Arduino](graphics/environment_scanning.png)
 
+![panoramic_tile_set](graphics/panoramic_tile_set.png)
+
 ## Images
 
 - the set of images labeled as A are taken at standard vertical angle (30 degrees relative to the horizon).
