@@ -26,13 +26,14 @@ A robot (Arduino + Raspberry Pi 3 equipped with a PiNoIR camera) was placed on t
 ![grid placed on the floor of the watermaze](graphics/grid.png)
 
 The eye of the camera was placed at 21.5 cm from the pool floor.
+
 ![robot](graphics/robot.png)
 
 
 The camera acquired pictures at two different vertical angles (30° and 60°, relative to the horizon - the water surface @ 21.5 cm from the floor of the pool) to reproduce the (estimated) field of view of a rodent swimming in the water maze. A total of 16 images (separated by 22.5° interval) were acquired at each of the 45 cells (i.e. positions) covering the floor pool.
 
-![image_from_single position](graphics/image_from_single position.png)
 
+![image_from_single position](graphics/image_from_single position.png)
 
 
 The pool is located in an evenly illuminated and visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking and a white curtain.
