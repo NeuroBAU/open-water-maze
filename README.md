@@ -51,7 +51,6 @@ Images (N=720 x 2 vertical angles) are available in two different formats [1920â
   the set of images labeled as B are taken at a vertical angle of 60 degrees relative to the horizon.
   The horizon is defined as the water surface
 
-- small images have been converted to 128 x 56 8-bit images
 - small_median images have been first converted to 128 x 56 8-bit images then a median filter (size = 1px) has been applied
 
 
