@@ -1,5 +1,5 @@
 # Open-Water-Maze
- Water Maze environment for comparing spatial navigation in biological and artificial agents
+Digital reconstruction of a real Water Maze environment for comparing spatial navigation in biological and artificial agents
 
 ![Environment scanning using Rasperry PI + Arduino](graphics/environment_scanning.png)
 
