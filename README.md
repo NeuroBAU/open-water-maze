@@ -26,9 +26,8 @@ A robot (Arduino + Raspberry Pi 3 equipped with a PiNoIR camera) was placed on t
 ![grid placed on the floor of the watermaze](graphics/grid.png)
 
 The eye of the camera was placed at 21.5 cm from the pool floor.
-<p align="center">
 ![robot](graphics/robot.png)
-</p>
+
 
 The camera acquired pictures at two different vertical angles (30° and 60°, relative to the horizon - the water surface @ 21.5 cm from the floor of the pool) to reproduce the (estimated) field of view of a rodent swimming in the water maze. A total of 16 images (separated by 22.5° interval) were acquired at each of the 45 cells (i.e. positions) covering the floor pool.
 
