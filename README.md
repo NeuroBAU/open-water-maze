@@ -5,11 +5,13 @@ Digital reconstruction of a real Water Maze environment for comparing spatial na
 
 ![panoramic_tile_set](graphics/panoramic_tile_set.png)
 
-The **"Open-Water Maze" (OWM)** is an open resource to promote the adoption of *in-silico* experiments in behavioral neuroscience. The OWM is a digital reconstruction of a real environment (i.e. a water maze) used to:
+The **"Open-Water Maze" (OWM)** is an open resource to promote the adoption of *in-silico* experiments in behavioral neuroscience.
+
+The OWM is a digital reconstruction of a real environment (i.e. a water maze) used to:
 
 > 1. Assess **exploration vs exploitation strategies** used by biological agents (i.e. mice) navigating the water maze
 
-> 2. **Compare biological and artificial agents** performing a similar spatial navigation task
+> 2. **Compare biological and artificial agents** in the (~)same  spatial navigation task
 
 
 The OWM is based on two _strong_ assumptions:
@@ -64,6 +66,18 @@ Indeed, this seems to happen when the rodent is actively searching for the platf
 ![mouse seacrching the platform through states](graphics/mouse_seeking_platform_through_views.png)
 
 _**Trajectory of a mouse navigating the 'real' water maze**. The mouse swims inside each position and it goes through multiple views in each cell - see for example, the orange trajectories._
+
+Overlaying the virtual grid on the swim paths of rodents searching for the platform using a behavioral tracking software (EthovisionXT 15, Noldus) allows the reconstruction of the estimated views gathered by the mouse during the navigation using its positon and direction in each grid.
+
+![biological agent searching for the submerged platform across the grid](graphics/probe_d11_9s.png)
+
+Since each view is associated with an expected information content, the trajectory can be summarized by the collection of unique visits to each view and compute the cumulative hamming distance for the trajectory.
+
+### Results
+Here we compared the first ~248 cm of the trajectories of a single mouse on probe-day 1 (first day of training) and  11 (last day of training). At day 11 the mouse takes a trajectory that yields an elevated information content relative to day 1. It would be interesting to compute the cumulative hamming distance for a 'random' trajectory. Ideally, this procedure should allow highlight the point in time when the mouse switches between an exploration to an exploitation strategy
+
+![hamming distance computed on a short trajectory, day 1 vs day 11](graphics/hamming_distance_performance.png)
+
 
 ## Notes.
 
