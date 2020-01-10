@@ -7,17 +7,18 @@ Digital reconstruction of a real Water Maze environment for comparing spatial na
 
 The **"Open-Water Maze" (OWM)** is an open resource to promote the adoption of *in-silico* experiments in behavioral neuroscience. The OWM is a digital reconstruction of a real environment (i.e. a water maze) used to:
 
-1. Assess **exploration vs exploitation strategies** used by biological agents (i.e. mice) navigating the water maze
+> 1. Assess **exploration vs exploitation strategies** used by biological agents (i.e. mice) navigating the water maze
 
-2. **Compare biological and artificial agents** performing a similar spatial navigation task
+> 2. **Compare biological and artificial agents** performing a similar spatial navigation task
 
 
-
-The OWM is based on two strong assumptions:
+The OWM is based on two _strong_ assumptions:
 
 1. Rodents use vision to solve the task
 
 2. The rodents' field of view is constrained (i.e. mostly frontal and overhead) due to the head's position in the water
+
+## Digital Reconstruction
 
 ### Procedure
 
@@ -29,32 +30,42 @@ The eye of the camera was placed at 21.5 cm from the pool floor.
 
 ![robot](graphics/robot.png)
 
+### Views
 
-The camera acquired pictures at two different vertical angles (30° and 60°, relative to the horizon - the water surface @ 21.5 cm from the floor of the pool) to reproduce the (estimated) field of view of a rodent swimming in the water maze. A total of 16 images (separated by 22.5° interval) were acquired at each of the 45 cells (i.e. positions) covering the floor pool.
+The camera acquired pictures at two different vertical angles (30° and 60°, relative to the horizon - the water surface @ 21.5 cm from the floor of the pool) to reproduce the (estimated) field of view of a rodent swimming inside the pool. A total of 16 images (separated by 22.5° interval) were acquired at each of the 45 cells (i.e. positions) covering the floor pool.
 
-![image_from_single position](graphics/image_from_single position.png)
+![image fromsingle position](graphics/image_from_single_position.png)
 
 The pool is located in an evenly illuminated and visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking and a white curtain.
 
-
-
-Images (N=720 x 2 vertical angles) are available in two different formats (1920 × 1080; 128 x 56; 8-bit)
+The 8-bit Images (N = 720; 2 vertical angles) are available in two different formats (1920 × 1080 or 128 x 56)
 
 ## Example: information content analysis
 
-The following is a simple example on how to quantify the information content of each field of view.
+The following is a simple analysis of the information content present in each field of view (i.e. not necessarily the best way to compute the information change when moving from one view to the next one)
 
+### Methods
 Each image was visually inspected to code for the presence or absence of the following visual cues: 
 
-Vertical stripes, Horizontal stripes, Plus sign, Coffee sign, Rod, Box, Wall/ceiling border, Curtain , and the Corners of the room.
+Vertical-stripes, Horizontal-stripes, Plus-sign, Coffee-sign, Rod, Box, Wall/ceiling border, Curtain, and the Corners of the room.
 
-For each image a vector coding for the presence (1) or absence (0) of the 9 salient cues was generated, resulting in a [720 x 9] matrix. For each position and for each image, the hamming distance between an image and the 2 adjacent images (i.e. representing a left or right  turn yielding a ±22.5° change of view) was computed. The resulting 2 vectors where averaged to produce the expected/potential information content of each individual point of view.
+![information_content](graphics/example_cues.png)
+
+For each image a vector coding for the presence (1) or absence (0) of the 9 salient cues was generated, resulting in a 720 x 9 matrix. For each position and for each image, the hamming distance between an image and the 2 adjacent images (i.e. representing a left or right turn, yielding a ±22.5° change of view) was computed. The resulting 2 vectors where averaged to produce the expected information content of each individual view.
+
+This results in a virtual grid where each position contains 16 different views associated to a distinct expected information content. We could then imagine the rodent navigating through these states (i.e. position + view) collecting visual information as it searches for the platform.
 
 ![information_content](graphics/information_content.png)
 
+Of course, the resolution of the grid overlaid on the pool is rather coarse (each cell is 20 x 20 cm), adn the rodent goes through different views inside the same cell before moving to a different positon.
 
+Indeed, this seems to happen when the rodent is actively searching for the platform.
 
-## Misc.
+![mouse seacrching the platform through states](graphics/mouse_seeking_platform_through_views.png)
+
+_**Trajectory of a mouse navigating the 'real' water maze**. The mouse swims inside each position and it goes through multiple views in each cell - see for example, the orange trajectories._
+
+## Notes.
 
 - the set of images labeled as A are taken at standard vertical angle (30 degrees relative to the horizon).
   the set of images labeled as B are taken at a vertical angle of 60 degrees relative to the horizon.
