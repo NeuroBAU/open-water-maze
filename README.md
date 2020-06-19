@@ -35,7 +35,11 @@ The camera acquired pictures at two different vertical angles (30° and 60°, re
 
 ![image from single position](graphics/image_from_single_position.png)
 
-The pool is located in a visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking, and a white curtain. The 8-bit images (N = 720; 2 vertical angles) are available in two different formats (1920 × 1080; 128 x 56)
+The pool is located in a visually homogeneous room (white walls, white ceiling, and a white curtain). Only four salient cues are placed at the corners of the room (distance form the pool center: ~170 cm). Additional cues include a rod on the ceiling that holds the camera used for behavior tracking, and a white curtain. The 8-bit images (N = 720; 2 vertical angles) are available in two different formats (1920 × 1080; 128 x 56).
+The views (i.e. images) can be found here: https://github.com/sciple/open-water-maze/tree/master/owm/views
+Views are stored in folders numbered according to the shematics shown below:
+![image from single position](graphics/grid_cell_numbers.png)
+
 
 ## Example: information content analysis
 
